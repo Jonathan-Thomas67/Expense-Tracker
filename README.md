@@ -2,7 +2,7 @@
 
 A simple personal income & expense tracking web app.
 
-**Stack:** React (Vite) · Django REST Framework · MySQL (SQLite for quick local dev) · JWT auth · Recharts
+**Stack:** React (Vite) · Django REST Framework · SQLite is used for quick local development · JWT auth · Recharts
 
 ```
 expense-tracker/
@@ -18,8 +18,13 @@ The `docs/` folder is the single source of truth for scope — see `SRS.md`,
 
 ```bash
 cd backend
+Windows:
+python -m venv venv
+venv\Scripts\activate
+
+Linux/macOS:
 python3 -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
+source venv/bin/activate       # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
 cp .env.example .env            # then edit DB_ENGINE / DB_* as needed
@@ -32,7 +37,7 @@ that line) in `.env` and skip straight to migrations below.
 then in `.env` set:
 
 ```
-DB_ENGINE=mysql
+DB_ENGINE=sqlite
 DB_NAME=expense_tracker
 DB_USER=root
 DB_PASSWORD=your_password
