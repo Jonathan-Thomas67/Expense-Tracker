@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Sora", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            colors: {
+              ink: "#12231c",
+              paper: "#F6F4EE",
+              moss: {
+                50: "#eef4ef",
+                100: "#d6e6da",
+                300: "#95bfa2",
+                500: "#3f7a56",
+                600: "#2f6244",
+                700: "#234b34",
+                900: "#12231c",
+              },
+              clay: "#c96a4e",
+              gold: "#c79a3e",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-paper text-ink font-body antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
